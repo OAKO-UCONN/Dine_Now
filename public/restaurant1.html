@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Passport Authentication</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release-pro/v3.0.0/css/solid.css?key=607ecca0-e8b1-11ea-ba29-0242ac140003"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/logout">
+              Logout
+            </a>
+          </div>
+          <a href= "#">
+            <div style= "text-align: right">
+              <img src="assets/icons/home.png" />
+            </div>
+          <a>  
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h2>Restaurant 1 <span class="member-name"></span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <span class="fa fa-fire"></span> Not The Hot Restaurant
+        </h1>
+        <hr />
+        <h2 class="text-center">
+          We only have 5 tables! Book your seat before they all are gone!
+        </h2>
+        <br />
+
+        <div class="text-center">
+          <a href="/tables"
+            ><button class="btn btn-lg btn-primary">
+              <img src="assets/icons/table (1).png" />
+              <span class="fa fa-list-alt"></span> View Tables
+            </button></a
+          >
+          <a href="/reserve"
+            ><button class="btn btn-lg btn-danger">
+              <img src="assets/icons/restaurateur.png"/>
+              <span class=""></span> Make Reservation
+            </button></a
+          >
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p>
+            <a href="/api/tables">API Table Link</a> |
+            <a href="/api/waitlist">API Wait List</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
+  </body>
+</html>
