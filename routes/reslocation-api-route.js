@@ -9,20 +9,9 @@ const { json } = require("body-parser");
 router.use(bodyParser.urlencoded({ extend: true }));
 let map;
 
-router.get("/restaraunt-weather", function(req,res){
-    
+router.get("/api/restaurant", function(req,res){
+    db.Restaurant.findAll({}).then(function(dbRestaurant){
+        res.json(dbRestaurant)
+    })
 }
 
-
-//try to have "res owners" input their location, get location from DB, then use
-//a route and API to get the weather from that DB
-
-//  create an object with key value pairs for
-//  res location and google map location
-
-const resLocation = {
-res1: city1,
-res2: city2,
-res3: city3
-
-}

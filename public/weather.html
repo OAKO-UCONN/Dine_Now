@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>my google map</h1>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        //map options
+        var options = {
+          zoom: 12,
+          center: { lat: 41.310726, lng: -72.929916 },
+        };
+        //new map
+        var map = new google.maps.Map(document.getElementById("map"), options);
+        //add marker function
+        addMarker({ coords: { lat: 41.310726, lng: -72.929916 } });
+        // addMarker({ coords: {} });
+        // addMarker({ coords: {} });
+        //inside the addMArker place the coords of the restaurants
+        function addMarker(props) {
+          const marker = new google.maps.Marker({
+            position: props.coords,
+            map: map,
+          });
+        }
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <!-- <script src="./routes/reslocation-api-route"></script> -->
+  </body>
+</html>
