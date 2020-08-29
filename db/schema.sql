@@ -6,6 +6,7 @@
 --
 -- SELECT * FROM igg6j8h96feu1o6q; --
 CREATE TABLE RestarauntTables (
+    RestaurantTables int NOT NULL,
     Sanitized varchar(255),
     Booked varchar(255),
     Seats varchar(255),
