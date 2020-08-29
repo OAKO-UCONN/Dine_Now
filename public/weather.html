@@ -24,9 +24,19 @@
         //new map
         var map = new google.maps.Map(document.getElementById("map"), options);
         //add marker function
-        addMarker({ coords: { lat: 41.310726, lng: -72.929916 } });
-        // addMarker({ coords: {} });
-        // addMarker({ coords: {} });
+        //array of markers
+
+        var markers = [
+          { coords: { lat: 41.161563, lng: -73.417751 } },
+          { coords: { lat: 41.2976, lng: -72.7784 } },
+          // addMarker({ coords: {} });
+        ];
+
+        //loop through markers
+        for (var i = 0; i < markers.length; i++) {
+          addMarker(markers[i]);
+        }
+
         //inside the addMArker place the coords of the restaurants
         function addMarker(props) {
           const marker = new google.maps.Marker({
@@ -35,6 +45,7 @@
           });
         }
       }
+      //   addMarker();
     </script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&callback=initMap&libraries=&v=weekly"
