@@ -12,45 +12,26 @@
     </style>
   </head>
   <body>
-    <h1>my google map</h1>
+    <h1>Weather</h1>
     <div id="map"></div>
-    <script>
-      function initMap() {
-        //map options
-        var options = {
-          zoom: 12,
-          center: { lat: 41.310726, lng: -72.929916 },
-        };
-        //new map
-        var map = new google.maps.Map(document.getElementById("map"), options);
-        //add marker function
-        //array of markers
+    <div class="row">
+      <div id="currentRes" class="col-md-4">
+        <p id="city"></p>
+        <p id="temp"></p>
+        <p id="humidity"></p>
+        <p id="skydescription"></p>
+        <p id="wind"></p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        var markers = [
-          { coords: { lat: 41.161563, lng: -73.417751 } },
-          { coords: { lat: 41.2976, lng: -72.7784 } },
-          // addMarker({ coords: {} });
-        ];
-
-        //loop through markers
-        for (var i = 0; i < markers.length; i++) {
-          addMarker(markers[i]);
-        }
-
-        //inside the addMArker place the coords of the restaurants
-        function addMarker(props) {
-          const marker = new google.maps.Marker({
-            position: props.coords,
-            map: map,
-          });
-        }
-      }
-      //   addMarker();
-    </script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&libraries=&v=weekly"
       defer
     ></script>
-    <!-- <script src="./routes/reslocation-api-route"></script> -->
+    <script src="./js/location.js"></script>
   </body>
 </html>
+
+<!-- 
+AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0 -->
