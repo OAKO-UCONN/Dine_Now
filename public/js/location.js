@@ -110,7 +110,7 @@ $(document).ready(function() {
       //has to change to manipulate the DOM, use jquery to show weather
 
       $("#skydescription").text(
-        data.observations.location[0].observation[0].description
+        "It is " + data.observations.location[0].observation[0].description
       );
       $("#wind").text(
         "The wind speed today is " +
