@@ -19,6 +19,31 @@ function getLocation() {
     });
   });
 }
+viewTables();
+function viewTables() {
+  router.get("/api/seating", function(req, res) {
+    db.Tables.findAll({
+      where: {
+        resName: req.body.resName,
+      },
+    }).then(function(dbTables) {
+      res.json(dbTables);
+    });
+  });
+}
+
+reserveTable();
+function reserveTable() {
+  router.put("/api/reserve-table", function(req, res) {
+    db.Tables.update(req.body, {
+      where: {
+        id: req.body.id,
+      },
+    }).then(function(dbTables) {
+      res.json(dbTables);
+    });
+  });
+}
 //should work if the table for the Restaurants was maybe something like this
 //just an example
 
