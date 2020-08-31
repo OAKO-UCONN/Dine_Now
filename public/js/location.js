@@ -3,7 +3,6 @@ $(document).ready(function() {
   $(function() {
     $(
       ".resName".on("click", function(event) {
-        // "SELECT * FROM restaurants WHERE id = ?";
         var lat = $(this).data("lat");
         var lng = $(this).data("lng");
         $.ajax("/reslocation/" + lat + lng, {
