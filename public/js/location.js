@@ -89,7 +89,7 @@ $(document).ready(function() {
   }
   initMap();
   $.ajax({
-    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=SzqNUpgamzSYn-wUIvDfej8CKS8h8gH1XbxBy17TkVA`,
+    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=sJU21CIiXW2OtruHQx4FhEmnola1mMXetV7hdU7_In4`,
     success: function(data) {
       console.log(data);
       $("#city").text(
