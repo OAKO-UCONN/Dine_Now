@@ -3,10 +3,12 @@ $(document).ready(function() {
   $(function() {
     $(
       ".resName".on("click", function(event) {
+        // "SELECT * FROM restaurants WHERE id = ?";
         var lat = $(this).data("lat");
         var lng = $(this).data("lng");
         $.ajax("/reslocation/" + lat + lng, {
           method: "GET",
+          type: JSON,
           data: {
             location: true,
           },
@@ -19,7 +21,34 @@ $(document).ready(function() {
           });
       })
     );
+       //to view res tables, available and taken
+    $(".viewSeating").on("click", function(event){
+      var tables = $(this).data("tables");
+      $.ajax("/seating/" + tables, {
+        method: "GET",
+        type: JSON,
+        data: {
+          
+        }
+      })
+    }) 
+//this ajax call is for when the user clicks a reserve button, it will reserve the chosen table
+    $(".reserve").on("click", function(event) {
+      var id = $(this).data("id");
+      // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
+      $.ajax("/reserve-table/" + id {
+        method: "PUT",
+        data: {
+          reserveTable: true,
+        },
+      }).then (function(){
+        console.log("this table has been reserved")
+      }).catch (function(error){
+        console.log(error)
+      })
+    });
   });
+
 
   var lat = 41.161563; //supply by DB
   var lng = -73.417751;
@@ -64,6 +93,7 @@ $(document).ready(function() {
     success: function(data) {
       console.log(data);
       $("#city").text(
+        //maybe try to have it say the specific res name from DB?
         "This restaurant is located in " +
           data.observations.location[0].observation[0].city
       );
