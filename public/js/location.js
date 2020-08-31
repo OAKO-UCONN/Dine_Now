@@ -91,15 +91,16 @@ $(document).ready(function() {
     url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=sJU21CIiXW2OtruHQx4FhEmnola1mMXetV7hdU7_In4`,
     success: function(data) {
       console.log(data);
+      var fahrenheitTemp = Math.round(
+        (data.observations.location[0].observation[0].temperature * 9) / 5 + 32
+      );
       $("#city").text(
         //maybe try to have it say the specific res name from DB?
         "This restaurant is located in " +
           data.observations.location[0].observation[0].city
       );
       $("#temp").text(
-        "The current temperature is " +
-          data.observations.location[0].observation[0].temperature +
-          " degrees Fahrenheit"
+        "The current temperature is " + fahrenheitTemp + " degrees Fahrenheit"
       );
       $("#humidity").text(
         "The Humidity is " +
