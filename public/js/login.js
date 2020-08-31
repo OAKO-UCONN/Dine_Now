@@ -34,7 +34,8 @@ $(document).ready(() => {
       })
       .catch(err => {
         console.log(err);
-        console.log("wrong user/passowrd", err.statusText);
+        if (err.responseText === "Unauthorized")
+          alert("Please check your UserName/ Pass");
       });
   }
 });
