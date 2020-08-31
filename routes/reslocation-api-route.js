@@ -2,7 +2,7 @@ const express = reuire("express");
 const db = require("../public");
 const router = express.Router();
 const bodyParser = require("body-parser");
-const { request } = require("http");
+const request = require("http");
 
 router.use(bodyParser.urlencoded({ extend: true }));
 
@@ -32,8 +32,8 @@ function viewTables() {
   });
 }
 
-reserveTable();
-function reserveTable() {
+reservetable();
+function reservetable() {
   router.put("/api/reserve-table", function(req, res) {
     db.Tables.update(req.body, {
       where: {
