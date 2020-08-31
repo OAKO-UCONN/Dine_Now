@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather</h1>
+    <div id="map"></div>
+    <div class="row">
+      <div id="currentRes" class="col-md-4">
+        <p id="city"></p>
+        <p id="temp"></p>
+        <p id="humidity"></p>
+        <p id="skydescription"></p>
+        <p id="wind"></p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="./js/location.js"></script>
+  </body>
+</html>
+
+<!-- 
+AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0 -->
