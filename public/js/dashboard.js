@@ -1,5 +1,7 @@
-$(function() {
-
+//$(function() {
+//$(document).ready(function()) {
+$( document ).ready(function() {
+    console.log("dashboard.js")
     $('.tab-panels .tabs li').on('click', function() {
 
         var $panel = $(this).closest('.tab-panels');
