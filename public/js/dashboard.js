@@ -1,27 +1,25 @@
 $(function() {
+  $('.tab-panels .tabs li').on('click', function() {
+    var panel = $(this).closest('.tab-panels');
 
-    $('.tab-panels .tabs li').on('click', function() {
+    panel.find('.tabs li.active').removeClass('active');
+    $(this).addClass('active');
 
-        var $panel = $(this).closest('.tab-panels');
+    //figure out which panel to show
+    var panelToShow = $(this).attr('rel');
 
-        $panel.find('.tabs li.active').removeClass('active');
-        $(this).addClass('active');
+    //hide current panel
 
-        //figure out which panel to show
-        var panelToShow = $(this).attr('rel');
-
-        //hide current panel
-        $panel.find('.panel.active').slideUp(300, showNextPanel);
-
-        //show next panel
-        function showNextPanel() {
-            $(this).removeClass('active');
-
-            $('#'+panelToShow).slideDown(300, function() {
-                $(this).addClass('active');
-            });
-        }
+    panel.find('.panel.active').slideUp(300, function() {
+      showNextPanel();
     });
+    //show next panel
+    function showNextPanel() {
+      $(this).removeClass('active');
 
-
+      $('#' + panelToShow).slideDown(300, function() {
+        $(this).addClass('active');
+      });
+    }
+  });
 });
