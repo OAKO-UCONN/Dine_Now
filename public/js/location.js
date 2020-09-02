@@ -2,28 +2,55 @@ $(document).ready(function() {
   //ajax call to DB where the location of res or res's will be stored.
   $(function() {
     $(
-      '.resName'.on('click', function(event) {
-        var lat = $(this).data('lat');
-        var lng = $(this).data('lng');
-        $.ajax('/reslocation/' + lat + lng, {
-          method: 'GET',
+      ".resName".on("click", function(event) {
+        var lat = $(this).data("lat");
+        var lng = $(this).data("lng");
+        $.ajax("/reslocation/" + lat + lng, {
+          method: "GET",
+          type: JSON,
           data: {
             location: true,
           },
         })
           .then(function() {
-            console.log('this res has been located!');
+            console.log("this res has been located!");
           })
           .catch(function(error) {
             console.log(error);
           });
       })
     );
+    //to view res tables, available and taken
+    $(".viewSeating").on("click", function(event) {
+      var tables = $(this).data("tables");
+      $.ajax("/seating/" + tables, {
+        method: "GET",
+        type: JSON,
+        data: {},
+      });
+    });
+    //this ajax call is for when the user clicks a reserve button, it will reserve the chosen table
+    $(".reserve").on("click", function(event) {
+      var id = $(this).data("id");
+      // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
+      $.ajax("/reserve-table/" + id, {
+        method: "PUT",
+        data: {
+          reserveTable: true,
+        },
+      })
+        .then(function() {
+          console.log("this table has been reserved");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    });
   });
 
   var lat = 41.161563; //supply by DB
   var lng = -73.417751;
-  ('use strict');
+  ("use strict");
   // In this example, we center the map, and add a marker, using a LatLng object
   // literal instead of a google.maps.LatLng object. LatLng object literals are
   // a convenient way to add a LatLng coordinate and, in most cases, can be used
@@ -37,7 +64,7 @@ $(document).ready(function() {
         lng: lng,
       },
     };
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
     const marker = new google.maps.Marker({
       // The below line is equivalent to writing:
       // position: new google.maps.LatLng("", "")
@@ -52,38 +79,40 @@ $(document).ready(function() {
     // we retrieve the marker's position using the
     // google.maps.LatLng.getPosition() method.
     const infowindow = new google.maps.InfoWindow({
-      content: '<p>Marker Location:' + marker.getPosition() + '</p>',
+      content: "<p>Marker Location:" + marker.getPosition() + "</p>",
     });
-    google.maps.event.addListener(marker, 'click', () => {
+    google.maps.event.addListener(marker, "click", () => {
       infowindow.open(map, marker);
     });
   }
   initMap();
   $.ajax({
-    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=SzqNUpgamzSYn-wUIvDfej8CKS8h8gH1XbxBy17TkVA`,
+    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=bK08T9lM1gkpxn8Iie8fpTd8x-e-tlX-xePQ3OFRPGo`,
     success: function(data) {
       console.log(data);
-      $('#city').text(
-        'This restaurant is located in ' +
+      var fahrenheitTemp = Math.round(
+        (data.observations.location[0].observation[0].temperature * 9) / 5 + 32
+      );
+      $("#city").text(
+        //maybe try to have it say the specific res name from DB?
+        "This restaurant is located in " +
           data.observations.location[0].observation[0].city
       );
-      $('#temp').text(
-        'The current temperature is ' +
-          data.observations.location[0].observation[0].temperature +
-          ' degrees Fahrenheit'
+      $("#temp").text(
+        "The current temperature is " + fahrenheitTemp + " degrees Fahrenheit"
       );
-      $('#humidity').text(
-        'The Humidity is ' +
+      $("#humidity").text(
+        "The Humidity is " +
           data.observations.location[0].observation[0].humidity +
-          '%'
+          "%"
       );
       //has to change to manipulate the DOM, use jquery to show weather
 
-      $('#skydescription').text(
-        data.observations.location[0].observation[0].description
+      $("#skydescription").text(
+        "It is " + data.observations.location[0].observation[0].description
       );
-      $('#wind').text(
-        'The wind speed today is ' +
+      $("#wind").text(
+        "The wind speed today is " +
           data.observations.location[0].observation[0].windSpeed
       );
     },
