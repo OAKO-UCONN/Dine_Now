@@ -87,7 +87,7 @@ $(document).ready(function() {
   }
   initMap();
   $.ajax({
-    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=sJU21CIiXW2OtruHQx4FhEmnola1mMXetV7hdU7_In4`,
+    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=bK08T9lM1gkpxn8Iie8fpTd8x-e-tlX-xePQ3OFRPGo`,
     success: function(data) {
       console.log(data);
       var fahrenheitTemp = Math.round(
