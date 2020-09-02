@@ -20,32 +20,6 @@ $(document).ready(function() {
           });
       })
     );
-    //to view res tables, available and taken
-    $(".viewSeating").on("click", function(event) {
-      var tables = $(this).data("tables");
-      $.ajax("/seating/" + tables, {
-        method: "GET",
-        type: JSON,
-        data: {},
-      });
-    });
-    //this ajax call is for when the user clicks a reserve button, it will reserve the chosen table
-    $(".reserve").on("click", function(event) {
-      var id = $(this).data("id");
-      // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
-      $.ajax("/reserve-table/" + id, {
-        method: "PUT",
-        data: {
-          reserveTable: true,
-        },
-      })
-        .then(function() {
-          console.log("this table has been reserved");
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    });
   });
 
   var lat = 41.161563; //supply by DB
