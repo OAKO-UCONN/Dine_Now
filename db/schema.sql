@@ -24,7 +24,7 @@ CREATE TABLE Restaraunt (
     RestarantName varchar(255),
     OutdoorIndoorTable varchar(255),
     lat int NOT NULL,
-    lon int NOT NULL,
+    lng int NOT NULL,
     table_id
     CONSTRAINT table_id FOREIGN KEY(table_id) REFERENCES Table(id) ON DELETE CASCADE
     
