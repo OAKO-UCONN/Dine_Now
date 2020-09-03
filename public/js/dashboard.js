@@ -1,29 +1,25 @@
-//$(function() {
-//$(document).ready(function()) {
-$( document ).ready(function() {
-    console.log("dashboard.js")
-    $('.tab-panels .tabs li').on('click', function() {
+$(function() {
+  $('.tab-panels .tabs li').on('click', function() {
+    var panel = $(this).closest('.tab-panels');
 
-        var $panel = $(this).closest('.tab-panels');
+    panel.find('.tabs li.active').removeClass('active');
+    $(this).addClass('active');
 
-        $panel.find('.tabs li.active').removeClass('active');
-        $(this).addClass('active');
+    //figure out which panel to show
+    var panelToShow = $(this).attr('rel');
 
-        //figure out which panel to show
-        var panelToShow = $(this).attr('rel');
+    //hide current panel
 
-        //hide current panel
-        $panel.find('.panel.active').slideUp(300, showNextPanel);
-
-        //show next panel
-        function showNextPanel() {
-            $(this).removeClass('active');
-
-            $('#'+panelToShow).slideDown(300, function() {
-                $(this).addClass('active');
-            });
-        }
+    panel.find('.panel.active').slideUp(300, function() {
+      showNextPanel();
     });
+    //show next panel
+    function showNextPanel() {
+      $(this).removeClass('active');
 
-
+      $('#' + panelToShow).slideDown(300, function() {
+        $(this).addClass('active');
+      });
+    }
+  });
 });
