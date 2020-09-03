@@ -2,3 +2,7 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+h3 {
+  color: rgb(112, 81, 46);
+}
