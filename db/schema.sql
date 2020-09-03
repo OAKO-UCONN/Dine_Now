@@ -19,40 +19,39 @@ CREATE TABLE RestarauntTables (
 );
 
 
+use `igg6j8h96feu1o6q`;
 
 
 CREATE TABLE User(
-    id int AUTO_INCREMENT
-    primary key(id)
+    id int AUTO_INCREMENT NOT NULL primary key,
     name VARCHAR (200) NOT NULL 
 );
 
-CREATE TABLE Tables(
-     id int AUTO_INCREMENT
-    primary key(id)
-     Tables int NOT NULL,
-    reserveTable BOOLEAN DEFAULT FALSE 
-    -- figrue out how to set default
-    user_id
-    CONSTRAINT user_id FOREIGN KEY(user_id) REFERENCES User(id) ON DELETE CASCADE
-)
-
 CREATE TABLE Restaraunt (
-    id int AUTO_INCREMENT
-    primary key(id)
-    Sanitized varchar(255),
-    RestarantName varchar(255),
+    id int AUTO_INCREMENT NOT NULL primary key,
+    Sanitized BOOLEAN,
+   Name varchar(255),
     OutdoorIndoorTable varchar(255),
-    lat int NOT NULL,
-    lng int NOT NULL,
-    table_id
-    CONSTRAINT table_id FOREIGN KEY(table_id) REFERENCES Table(id) ON DELETE CASCADE
-    
+    lat DECIMAL(10, 8) NOT NULL,
+    lng DECIMAL(11, 8) NOT NULL
 );
+
+CREATE TABLE Tables(
+     id int AUTO_INCREMENT primary key,
+     numTables int NOT NULL,
+    reserveTable BOOLEAN DEFAULT FALSE,
+    -- figrue out how to set default
+    restaraunt_id INT NOT NULL,
+    user_id INT NOT NULL,
+    CONSTRAINT restaraunt_id  FOREIGN KEY(restaraunt_id) REFERENCES Restaraunt(id) ON DELETE CASCADE,
+    CONSTRAINT user_id FOREIGN KEY(user_id) REFERENCES User(id) ON DELETE CASCADE
+);
+
+
 
 INSERT INTO User (name) VALUES();
 INSERT INTO Tables (reserveTable, Tables, user_id) VALUES();
-INSERT INTO Restaraunt(RestarantName, OutdoorIndoorTable, Sanitized, table_id) VALUES()
+INSERT INTO Restaraunt(Name, OutdoorIndoorTable, Sanitized, table_id) VALUES()
 
 
 

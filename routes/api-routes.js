@@ -47,7 +47,22 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
+        name: req.user.name,
       });
     }
+  });
+
+  app.put("/api/reserve-table/:id", (req, res) => {
+    db.Table.update({ reserveTable: true }, { where: { id: req.params.id } })
+      .then((tableJSON) => res.send(tableJSON))
+      .catch((err) => {
+        res.status(422).send(err);
+      });
+  });
+
+  app.get("/api/restaurants", (req, res) => {
+    db.Restaraunt.findAll({}).then((results) => {
+      res.json(results);
+    });
   });
 };

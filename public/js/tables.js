@@ -11,14 +11,9 @@ $(document).ready(function() {
     });
   });
 
-  $(".viewSeating").on("click", function(event) {
-    var tables = $(this).data("availableTables");
-    $.ajax("/seating/" + tables, {
-      method: "GET",
-      type: JSON,
-      data: {},
-    });
-  });
+  //make a new col in DB for above function
+
+  
   //this ajax call is for when the user clicks a reserve button, it will reserve the chosen table
   $(".reserve").on("click", function(event) {
     var id = $(this).data("id");
@@ -36,7 +31,7 @@ $(document).ready(function() {
         console.log(error);
       });
   });
-    
+     //make a new col in DB for above function
     });
 
 }
