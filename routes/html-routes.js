@@ -28,38 +28,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/weather", (req, res) => {
-    res.sendFile(__dirname, "../public/weather.html");
-  });
-
-  app.get("/viewseating", (req, res) => {
-    res.sendFile();
-  });
-
-  //to view res tables, available and taken
-  $(".viewSeating").on("click", function(event) {
-    var tables = $(this).data("tables");
-    $.ajax("/seating/" + tables, {
-      method: "GET",
-      type: JSON,
-      data: {},
-    });
-  });
-  //this ajax call is for when the user clicks a reserve button, it will reserve the chosen table
-  $(".reserve").on("click", function(event) {
-    var id = $(this).data("id");
-    // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
-    $.ajax("/reserve-table/" + id, {
-      method: "PUT",
-      data: {
-        reserveTable: true,
-      },
-    })
-      .then(function() {
-        console.log("this table has been reserved");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+  app.get("/restaurant", (req, res) => {
+    res.sendFile(__dirname, "../public/restaurant.html");
   });
 };

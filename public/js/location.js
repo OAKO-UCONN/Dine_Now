@@ -7,7 +7,6 @@ $(document).ready(function() {
         var lng = $(this).data("lng");
         $.ajax("/reslocation/" + lat + lng, {
           method: "GET",
-          type: JSON,
           data: {
             location: true,
           },
@@ -61,19 +60,17 @@ $(document).ready(function() {
   }
   initMap();
   $.ajax({
-    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=bK08T9lM1gkpxn8Iie8fpTd8x-e-tlX-xePQ3OFRPGo`,
+    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=SzqNUpgamzSYn-wUIvDfej8CKS8h8gH1XbxBy17TkVA`,
     success: function(data) {
       console.log(data);
-      var fahrenheitTemp = Math.round(
-        (data.observations.location[0].observation[0].temperature * 9) / 5 + 32
-      );
       $("#city").text(
-        //maybe try to have it say the specific res name from DB?
         "This restaurant is located in " +
           data.observations.location[0].observation[0].city
       );
       $("#temp").text(
-        "The current temperature is " + fahrenheitTemp + " degrees Fahrenheit"
+        "The current temperature is " +
+          data.observations.location[0].observation[0].temperature +
+          " degrees Fahrenheit"
       );
       $("#humidity").text(
         "The Humidity is " +
@@ -83,7 +80,7 @@ $(document).ready(function() {
       //has to change to manipulate the DOM, use jquery to show weather
 
       $("#skydescription").text(
-        "It is " + data.observations.location[0].observation[0].description
+        data.observations.location[0].observation[0].description
       );
       $("#wind").text(
         "The wind speed today is " +
