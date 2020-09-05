@@ -31,9 +31,4 @@ module.exports = function(app) {
   app.get("/restaurant", (req, res) => {
     res.sendFile(__dirname, "../public/restaurant.html");
   });
-
-  app.get("/reserve", (req, res) => {
-    res.sendFile(__dirname, "../public/reserve.html");
-  });
-
 };

@@ -8,11 +8,7 @@ body {
   display: grid;
   grid-template-columns: 1.2fr 5fr 1.2fr;
   grid-template-rows: 0.4fr 0.5fr 3fr 1fr;
-<<<<<<< HEAD
   /* background-image: url("https://image.flaticon.com/icons/svg/877/877434.svg"); */
-=======
-/*  background-image: url("https://image.flaticon.com/icons/svg/877/877434.svg"); */
->>>>>>> 0d16da0107d15ddd378950617254e1f359cb6667
   background-size: 200px;
   background-repeat: no-repeat;
   background-position-x: 80%;
