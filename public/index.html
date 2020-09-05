@@ -40,54 +40,68 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
     />
+    <link href="stylesheets/index.css" rel="stylesheet" />
     <link href="stylesheets/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  </head>
+  
+<!--Omars CDN's-->
 
+</head>
   <body>
+<!--Omars CDN's-->
+
+  
   <!--Omar's Changes-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+<style>
+.white-header-text{
+    color: white;
+}
+</style>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <ul><!--Unordered List START (Required to keep buttons horizontal.)-->
+
+      <!--You can add more elements to the LEFT of the buttons here.-->
+
+      <!--Title of our Web App-->
+        <li class="dine-now-title main-value">
+          <h1>Dine Now!!!</h1> 
+        </li>
+
+      <!--SignUp Button with href-->
+        <li>  
+          <form action="./signup.html">
+            <button type="submit" class="check-work">
+              <h1 class="white-header-text">Sign Up</h1>
+            </button>
+          </form>
+        </li>
+      <!--SignUp Button with href END-->
+
+      <!--Login Button with href-->
+        <li>
+          <form action="./login.html">
+            <button type="submit" class="check-work">
+              <h1 class="white-header-text">Log In</h1>
+            </button>
+          </form>
+        </li>
+      <!--Login Button with href END-->
+
+      <!--You can add more elements to the RIGHT of the buttons here.-->
+
+      </ul><!--Unrdered List START (Required to keep buttons horizontal.) END-->
       </div>
-    </nav>
+    </div>
+  </nav>
          <!-- Sona Changes  -->
          <div class="main-container">
           <div class='nav'>
             <a href="https://github.com/OAKO-UCONN/2nd_Project_Full_Stack" class='link'>GitHub</a>
           </div>
-            <h1 class="main-value">shopMarina.</h1>
-            <h2 class="sub-value">May we introduce you to the fresh taste of the <span class="sota">ocean.</span> 
+            <h1 class="main-value">Dine Now!</h1>
+            <h2 class="sub-value">May we introduce you to the new way of <span class="sota">dining.</span> 
            
             </h2>
           <a href='#project-container' class='check-work'><div class="check-work" id="checkWork" >View items</div></a>
@@ -138,8 +152,7 @@
                   </div>
                 </div>
     
-            </div>
-<!-----------------------------------------END_HTML---------------------------------------->     
+            </div>   
       <!-- Sona Changes  -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="js/signup.js"></script>
@@ -151,5 +164,6 @@
         $(".parallax").parallax();
       });
     </script>
+
   </body>
 </html>
