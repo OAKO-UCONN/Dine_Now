@@ -15,7 +15,7 @@ ul{
   display: grid;
   grid-template-columns: 1.2fr 5fr ;
   grid-template-rows: 0.4fr 0.5fr 3fr 1fr;
-  background-image: url("https://image.flaticon.com/icons/svg/877/877434.svg");
+/*  background-image: url("https://image.flaticon.com/icons/svg/877/877434.svg"); */
   background-size: 200px;
   background-repeat: no-repeat;
   background-position-x: 80%;
