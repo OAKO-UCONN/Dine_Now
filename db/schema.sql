@@ -3,24 +3,6 @@
 -- SELECT * FROM igg6j8h96feu1o6q; --
 
 
-CREATE TABLE RestarauntTables (
-    RestaurantTables int NOT NULL,
-    Sanitized varchar(255),
-    Booked varchar(255),
-    Seats varchar(255),
-    RestarantNameName varchar(255),
-    OutdoorIndoorTable varchar(255),
--- Address Info --
-    Addresss varchar(255),
-    Zip varchar(255),
-    City varchar(255),
-    County varchar(255),
-    States varchar(255),
-    Country varchar(255)
-);
-
-<<<<<<< HEAD
-
 use `igg6j8h96feu1o6q`;
 
 
@@ -51,8 +33,5 @@ CREATE TABLE Tables(
 
 
 
-INSERT INTO Restaraunt(Name, lat, lng) VALUES("Boston Market",41.161563,-73.417751),("Ren Dumpling House",41.161563,-73.417751),("Outback Steakhouse",41.161563,-73.417751),("Pokeworks",41.161563,-73.417751);
+INSERT INTO Restaraunt(Name, lat, lng) VALUES("Boston Market",41.161563,-73.417751,),("Ren Dumpling House",41.161563,-73.417751),("Outback Steakhouse",41.161563,-73.417751),("Pokeworks",41.161563,-73.417751);
 
-
-=======
->>>>>>> 67a2be7d98603582149700dfbf6cdadc0c3fccc8
