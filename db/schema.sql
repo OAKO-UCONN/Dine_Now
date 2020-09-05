@@ -2,6 +2,7 @@
 --
 -- SELECT * FROM igg6j8h96feu1o6q; --
 
+
 CREATE TABLE RestarauntTables (
     RestaurantTables int NOT NULL,
     Sanitized varchar(255),
@@ -17,3 +18,4 @@ CREATE TABLE RestarauntTables (
     States varchar(255),
     Country varchar(255)
 );
+

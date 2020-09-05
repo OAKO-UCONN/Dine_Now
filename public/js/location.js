@@ -7,7 +7,6 @@ $(document).ready(function() {
         var lng = $(this).data("lng");
         $.ajax("/reslocation/" + lat + lng, {
           method: "GET",
-          type: JSON,
           data: {
             location: true,
           },
@@ -20,32 +19,6 @@ $(document).ready(function() {
           });
       })
     );
-    //to view res tables, available and taken
-    $(".viewSeating").on("click", function(event) {
-      var tables = $(this).data("tables");
-      $.ajax("/seating/" + tables, {
-        method: "GET",
-        type: JSON,
-        data: {},
-      });
-    });
-    //this ajax call is for when the user clicks a reserve button, it will reserve the chosen table
-    $(".reserve").on("click", function(event) {
-      var id = $(this).data("id");
-      // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
-      $.ajax("/reserve-table/" + id, {
-        method: "PUT",
-        data: {
-          reserveTable: true,
-        },
-      })
-        .then(function() {
-          console.log("this table has been reserved");
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    });
   });
 
   var lat = 41.161563; //supply by DB
@@ -87,19 +60,17 @@ $(document).ready(function() {
   }
   initMap();
   $.ajax({
-    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=bK08T9lM1gkpxn8Iie8fpTd8x-e-tlX-xePQ3OFRPGo`,
+    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=SzqNUpgamzSYn-wUIvDfej8CKS8h8gH1XbxBy17TkVA`,
     success: function(data) {
       console.log(data);
-      var fahrenheitTemp = Math.round(
-        (data.observations.location[0].observation[0].temperature * 9) / 5 + 32
-      );
       $("#city").text(
-        //maybe try to have it say the specific res name from DB?
         "This restaurant is located in " +
           data.observations.location[0].observation[0].city
       );
       $("#temp").text(
-        "The current temperature is " + fahrenheitTemp + " degrees Fahrenheit"
+        "The current temperature is " +
+          data.observations.location[0].observation[0].temperature +
+          " degrees Fahrenheit"
       );
       $("#humidity").text(
         "The Humidity is " +
@@ -109,7 +80,7 @@ $(document).ready(function() {
       //has to change to manipulate the DOM, use jquery to show weather
 
       $("#skydescription").text(
-        "It is " + data.observations.location[0].observation[0].description
+        data.observations.location[0].observation[0].description
       );
       $("#wind").text(
         "The wind speed today is " +
