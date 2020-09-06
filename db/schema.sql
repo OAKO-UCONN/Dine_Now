@@ -20,7 +20,7 @@ CREATE TABLE Restaraunt (
     lng DECIMAL(11, 8) NOT NULL
 );
 
-CREATE TABLE Tables(
+CREATE TABLE Table(
      id int AUTO_INCREMENT primary key,
      numTables int NOT NULL,
     reserveTable BOOLEAN DEFAULT FALSE,
