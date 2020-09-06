@@ -1,8 +1,7 @@
 $(document).ready(function() {
   //ajax call to DB where the location of res or res's will be stored.
   $(function() {
-    $(
-      ".resName".on("click", function(event) {
+    $(".resName").on("click", function(event) {
         var lat = $(this).data("lat");
         var lng = $(this).data("lng");
         $.ajax("/reslocation/" + lat + lng, {
@@ -18,7 +17,6 @@ $(document).ready(function() {
             console.log(error);
           });
       })
-    );
   });
 
   var lat = 41.161563; //supply by DB
@@ -31,7 +29,7 @@ $(document).ready(function() {
   let map;
   function initMap() {
     const mapOptions = {
-      zoom: 8,
+      zoom: 18,
       center: {
         lat: lat,
         lng: lng,
@@ -59,10 +57,17 @@ $(document).ready(function() {
     });
   }
   initMap();
+
+
+
+
+
+  
   $.ajax({
-    url: `https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=${lat}&longitude=${lng}&oneobservation=true&apiKey=SzqNUpgamzSYn-wUIvDfej8CKS8h8gH1XbxBy17TkVA`,
+    url: "https://weather.ls.hereapi.com/weather/1.0/report.json?product=observation&latitude=41.161563&longitude=-73.417751&oneobservation=true&apiKey=suY8vNGrNiypJpsiPBON8r7zwNCsqEF1BIS6-MOSH5A",
+    type : 'GET',
     success: function(data) {
-      console.log(data);
+      console.log(data)
       $("#city").text(
         "This restaurant is located in " +
           data.observations.location[0].observation[0].city
@@ -86,6 +91,9 @@ $(document).ready(function() {
         "The wind speed today is " +
           data.observations.location[0].observation[0].windSpeed
       );
+
+
+
     },
   });
 });
