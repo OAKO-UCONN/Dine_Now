@@ -48,4 +48,8 @@ module.exports = function(app) {
   app.get("/restaurant", (req, res) => {
     res.sendFile(__dirname, "../public/restaurant.html");
   });
+
+  app.get("/view-table", (req, res) => {
+    res.sendFile(__dirname, "../public/view-tables.html");
+  });
 };
