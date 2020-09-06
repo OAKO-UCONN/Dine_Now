@@ -1,5 +1,3 @@
-const restaurant = require("./restaurant");
-
 module.exports = function(sequelize, DataTypes) {
   const Table = sequelize.define("Table", {
     numTables: {
