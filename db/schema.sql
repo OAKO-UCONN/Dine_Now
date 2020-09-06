@@ -14,17 +14,18 @@ CREATE TABLE User(
 CREATE TABLE Restaraunt (
     id int AUTO_INCREMENT NOT NULL primary key,
     Sanitized BOOLEAN,
-   Name varchar(255),
+    Name varchar(255),
     OutdoorIndoorTable varchar(255),
     lat DECIMAL(10, 8) NOT NULL,
     lng DECIMAL(11, 8) NOT NULL
 );
 
 CREATE TABLE Table(
-     id int AUTO_INCREMENT primary key,
-     numTables int NOT NULL,
+    id int AUTO_INCREMENT primary key,
+    -- numTables is total tables in Restaurant
+    numTables int NOT NULL,
+    -- Do we add the size(number of people) of a table?
     reserveTable BOOLEAN DEFAULT FALSE,
-    -- figrue out how to set default
     restaraunt_id INT NOT NULL,
     user_id INT NOT NULL,
     CONSTRAINT restaraunt_id  FOREIGN KEY(restaraunt_id) REFERENCES Restaraunt(id) ON DELETE CASCADE,
