@@ -1,34 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Almarai&family=Architects+Daughter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/app.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai&family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
     <!-- Compiled and minified CSS -->
     <!-- Compiled and minified JavaScript -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>index_.html</title>
-    </head>
-    <body>
-      <div class="main-container">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>index.html</title>
+
+    <!-- exsisting libs -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+    />
+    <link href="stylesheets/index.css" rel="stylesheet" />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+<!--Omars CDN's-->
+
+</head>
+  <body>
+<!--Omars CDN's-->
+
+  
+  <!--Omar's Changes-->
+<style>
+.white-header-text{
+    color: white;
+}
+</style>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <ul><!--Unordered List START (Required to keep buttons horizontal.)-->
+
+      <!--You can add more elements to the LEFT of the buttons here.-->
+
+      <!--Title of our Web App-->
+        <li class="dine-now-title main-value">
+          <h1>Dine Now!!!</h1> 
+        </li>
+
+      <!--SignUp Button with href-->
+        <li>  
+          <form action="./signup.html">
+            <button type="submit" class="check-work">
+              <h1 class="white-header-text">Sign Up</h1>
+            </button>
+          </form>
+        </li>
+      <!--SignUp Button with href END-->
+
+      <!--Login Button with href-->
+        <li>
+          <form action="./login.html">
+            <button type="submit" class="check-work">
+              <h1 class="white-header-text">Log In</h1>
+            </button>
+          </form>
+        </li>
+      <!--Login Button with href END-->
+
+      <!--You can add more elements to the RIGHT of the buttons here.-->
+
+      </ul><!--Unrdered List START (Required to keep buttons horizontal.) END-->
+      </div>
+    </div>
+  </nav>
+         <!-- Sona Changes  -->
+         <div class="main-container">
           <div class='nav'>
             <a href="https://github.com/OAKO-UCONN/2nd_Project_Full_Stack" class='link'>GitHub</a>
           </div>
-            <h1 class="main-value">shopMarina.</h1>
-            <h2 class="sub-value">May we introduce you to the fresh taste of the <span class="sota">ocean.</span> 
+            <h1 class="main-value">Dine Now!</h1>
+            <h2 class="sub-value">May we introduce you to the new way of <span class="sota">dining.</span> 
            
             </h2>
-          <a href='#project-container'><div class="check-work" id="checkWork" >View items</div></a>
+          <a href='#project-container' ><div class="check-work" id="checkWork" >View Favorites</div></a>
+          <a href='./restaurants.html' ><div class="check-work" id="checkWork" >View Restaurants</div></a>
         </div>
         <div class='project-container' id='project-container'>
             <div class="parallax-container modal-trigger" href="#modal1">
@@ -66,7 +143,7 @@
                           Dinner Choices.</p>
                           <p class='project-description'>A dinner worthy of Gordan Ramsay's top five in the east coast.</p>
                             <p class='project-description'>Crafted and cooked to perfection. We take pride in delivering the freshest food in the ocean locale.</p>
-
+    
                       </h4>
                       <div class='modal-content-images'>
                       <img class="modal-image materialboxed " src="https://i.insider.com/5beddcc248eb1217146887f3?width=1100&format=jpeg&auto=webp">
@@ -75,15 +152,19 @@
                     </div>
                   </div>
                 </div>
+    
+            </div>   
+      <!-- Sona Changes  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/signup.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".collapsible").collapsible();
+        $(".modal").modal();
+        $(".materialboxed").materialbox();
+        $(".parallax").parallax();
+      });
+    </script>
 
-            </div>
-        
-
-    <!-- <script> $(document).ready(function(){
-        $('.collapsible').collapsible();
-        $('.modal').modal();
-        $('.materialboxed').materialbox();
-        $('.parallax').parallax();
-      });</script> -->
-</body>
+  </body>
 </html>
