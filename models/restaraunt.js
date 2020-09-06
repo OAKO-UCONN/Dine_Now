@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   const Restaraunt = sequelize.define("Restaraunt", {
-    Sanitized: {
+    sanitized: {
       type: DataTypes.BOOLEAN,
     },
-    Name: {
+    name: {
       type: DataTypes.STRING,
     },
-    OutdoorIndoorTable: {
+    outdoorIndoorTable: {
       type: DataTypes.STRING,
     },
     lat: {
