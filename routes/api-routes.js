@@ -65,4 +65,10 @@ module.exports = function(app) {
       res.json(results);
     });
   });
+
+  app.get("/api/view-tables", (req, res) => {
+    db.Table.findAll({}).then((results) => {
+      res.json(results);
+    });
+  });
 };

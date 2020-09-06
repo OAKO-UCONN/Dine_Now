@@ -16,7 +16,7 @@ $(document).ready(function() {
     $(".reserve").on("click", function(event) {
       var id = $(this).data("id");
       // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
-      $.ajax("/reserve-table/" + id, {
+      $.ajax("/view-table/" + id, {
         method: "PUT",
         data: {
           reserveTable: true,
