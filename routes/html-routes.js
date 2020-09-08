@@ -6,8 +6,6 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 const { dirname } = require("path");
 
 module.exports = function(app) {
-  
-
   app.get("/", (req, res) => {
     // Changed this to always redirect to homepage and user just presses login.
     //  The browser saves the login info. If this is not the case we can use local storage
@@ -18,7 +16,6 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
-  
 
   //Changing this to redireect user to homepage first then they press the login button on the navbar.
   //This is just a backup. The Changes are above in app.get "/"
