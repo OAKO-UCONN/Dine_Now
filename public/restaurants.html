@@ -21,7 +21,42 @@
     <!--bootstrap-gridsys.css This CSS will detect Bootstrap CSS classes and automatically add debug boxes.-->
   </head>
   <body>
+    <!--Background HTML Start-->
+    <div class="background">
+      <div class="layer">
+      </div>
+    </div>
+    <!--Backround HTML End-->
+    <!--Background CSS Start-->
     <style>
+      .background {
+      background:url('../img/bg/diagonalnoise.png');
+      position: relative;
+      }
+
+      .layer {
+      background-color: rgba(248, 247, 216, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      }
+    </style>
+    <!--Background CSS END-->
+    <style>
+    /*
+      body {
+        background-image: url("./assets/restaurantfoodtray.gif");
+        /*
+        background-repeat: no-repeat;
+        background-size:cover;
+        *//*
+      }
+    */
+    </style>
+    <style>
+
      .btn-info > a{
         color:#fff !important;
       }
@@ -81,20 +116,6 @@
         </ul>
       </div>
     </nav>
-
-    <div class='weather-wrapper'>
-      <h1>Weather</h1>
-      <div id="map"></div>
-    </div>
-        <div class="row">
-          <div id="currentRes" class="col-md-4">
-            <p id="city"></p>
-            <p id="temp"></p>
-            <p id="humidity"></p>
-            <p id="skydescription"></p>
-            <p id="wind"></p>
-          </div>
-        </div>
 
     <!--Container CSS-->
     <style></style>
@@ -200,8 +221,22 @@
       <!--Row-->
     </div>
     <!-- End of container -->
-
-        
+   
+    <!--Weather Map Start-->
+    <div class='weather-wrapper'>
+      <h1>Weather</h1>
+      <div id="map"></div>
+    </div>
+        <div class="row">
+          <div id="currentRes" class="col-md-4">
+            <p id="city"></p>
+            <p id="temp"></p>
+            <p id="humidity"></p>
+            <p id="skydescription"></p>
+            <p id="wind"></p>
+          </div>
+        </div>
+    <!--Weather Map End-->  
 
     
     <!-----------------------------------------END_HTML---------------------------------------->
