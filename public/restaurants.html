@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reserve</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="stylesheets/bootstrap-gridsys.css" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reserve.html</title>
+    <title>restaurants.html</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/bootstrap-gridsys.css">
     <link rel="stylesheet" href="stylesheets/restaurants.css">
@@ -23,12 +12,13 @@
   <!--Background CSS Start-->
   <style>
     /*.background {*/
+    /*
     body {
     background:url('./assets/restaurantfoodtray.gif');
     position: relative;
     }
 
-    /*.layer {*/
+    /*.layer {*//*
     text {
     background-color: rgba(248, 247, 216, 0.7);
     position: absolute;
@@ -37,16 +27,17 @@
     width: 100%;
     height: 100%;
     }
+    */
   </style>
   <!--Background CSS END-->
   <body>
     <!--Background HTML Start-->
-    <div class="background">
-      <div class="layer">
+    <!--<div class="background">
+      <div class="layer">-->
     <!--Background HTML 0000-->
     
     <style>
-    
+  
       body {
         background-image: url("./assets/restaurantfoodtray.gif");
         /*
@@ -243,29 +234,38 @@
     <!--Weather Map End-->  
 
     <!-----------------------------------------BACKGROUND WRAPPER END-------------------------->
-  </div>
-</div>
+  <!--</div>
+</div>-->
 <!--Backround HTML End-->
-    <!-----------------------------------------END_HTML---------------------------------------->
-    <!--BootStrap JavaScript-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&libraries=&v=weekly"></script>
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/location.js"></script>
-    <!--BootStrap JavaScript End-->
-  </body>
+
+<!-----------------------------------------END_HTML---------------------------------------->
+
+<!--JQuery & Ajax-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--Google Maps-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&libraries=&v=weekly"></script>
+
+<!--BootStrap JavaScript-->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script> -->
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"
+></script>
+<!--BootStrap JavaScript End-->
+
+<!--Weather JS-->
+<script src="./js/location.js"></script>
+
+</body>
 </html>
