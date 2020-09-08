@@ -2,6 +2,23 @@ $(document).ready(function() {
   //ajax call to DB where the location of res or res's will be stored.
   $(function() {
     $(".resName").on("click", function(event) {
+<<<<<<< HEAD
+      var lat = $(this).data("lat");
+      var lng = $(this).data("lng");
+      $.ajax("/reslocation/" + lat + lng, {
+        method: "GET",
+        data: {
+          location: true,
+        },
+      })
+        .then(function() {
+          console.log("this res has been located!");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    });
+=======
         var lat = $(this).data("lat");
         var lng = $(this).data("lng");
         $.ajax("/reslocation/" + lat + lng, {
@@ -17,6 +34,7 @@ $(document).ready(function() {
             console.log(error);
           });
       })
+>>>>>>> master
   });
 
   var lat = 41.161563; //supply by DB
