@@ -18,6 +18,7 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
+  
 
   //Changing this to redireect user to homepage first then they press the login button on the navbar.
   //This is just a backup. The Changes are above in app.get "/"
