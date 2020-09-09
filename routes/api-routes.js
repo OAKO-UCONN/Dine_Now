@@ -66,7 +66,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/view-tables", (req, res) => {
+  app.get("/api/members", (req, res) => {
     db.Table.findAll({}).then((results) => {
       res.json(results);
     });
