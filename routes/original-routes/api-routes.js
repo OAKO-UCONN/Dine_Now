@@ -10,7 +10,7 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id,
+      id: req.user.id
     });
   });
 
@@ -20,12 +20,12 @@ module.exports = function(app) {
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
-      password: req.body.password,
+      password: req.body.password
     })
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch((err) => {
+      .catch(err => {
         res.status(401).json(err);
       });
   });
@@ -46,29 +46,8 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id,
-        name: req.user.name,
+        id: req.user.id
       });
     }
-  });
-
-  app.put("/api/reserve-table/:id", (req, res) => {
-    db.Table.update({ reserveTable: true }, { where: { id: req.params.id } })
-      .then((tableJSON) => res.send(tableJSON))
-      .catch((err) => {
-        res.status(422).send(err);
-      });
-  });
-
-  app.get("/api/restaurants", (req, res) => {
-    db.Restaraunt.findAll({}).then((results) => {
-      res.json(results);
-    });
-  });
-
-  app.get("/api/view-tables", (req, res) => {
-    db.Table.findAll({}).then((results) => {
-      res.json(results);
-    });
   });
 };
