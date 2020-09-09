@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   const Table = sequelize.define("Table", {
     numTables: {
       type: DataTypes.INTEGER,
+      defaultValue: 10,
     },
     reserveTable: {
       type: DataTypes.BOOLEAN,
