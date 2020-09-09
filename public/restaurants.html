@@ -46,6 +46,10 @@
         background-size:cover;
         */
       }*/
+
+      .weather-header {
+        color:rgb(160, 108, 24)
+      }
     
     </style>
     <style>
@@ -136,7 +140,7 @@
                 the bulk of the card's content.
               </p>
               <button type="button" class="btn btn-info">
-                <a href="/members.html">Reservations & More Info</a>
+                <a href="./restaurants/boston-market.html">Reservations & More Info</a>
               </button>
             </div>
           </div>
@@ -159,7 +163,7 @@
                 the bulk of the card's content.
               </p>
               <button id="viewSeating" type="button" class="btn btn-info">
-                <a href="/members.html">Reservations & More Info</a>
+                <a href="./restaurants/ren-dumpling-house.html">Reservations & More Info</a>
               </button>
             </div>
           </div>
@@ -182,7 +186,7 @@
                 the bulk of the card's content.
               </p>
               <button type="button" class="btn btn-info">
-                <a href="/members.html">Reservations & More Info</a>
+                <a href="./restaurants/outback-steakhouse.html">Reservations & More Info</a>
               </button>
             </div>
           </div>
@@ -204,19 +208,20 @@
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <button id="viewSeating" type="button" class="btn btn-info">
-                Reservations & More Info
-              </button>
+              <a href="./restaurants/pokeworks.html">Reservations & More Info</a>
             </div>
           </div><!--4 Restaurant 4-->
         </div><!--Restaurants Row End--> 
         <div class="row myrows"><!--Weather MAP MAP MAP Row START-->
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mycols">
             <!--Insert Google Map below in this div--><!--ONLY GOOGLE MAPS IN THIS ROW NO OTHER HTML ELEMENTS OTHER THAN THE TITLE!-->
-            <div class='weather-wrapper'>
-              <h1>Weather</h1>
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+              <div class='weather-wrapper'>
+              <h1 class="weather-header">Scroll down for the Weather</h1>
               <div id="map"></div>
             </div>
+              </div>
+            
             <div class="row">
               <div id="currentRes" class="col-md-4">
                 <p id="city"></p>
