@@ -43,7 +43,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/restaurant.html"));
   });
 
-  app.get("/", (req, res) => {
-    res.sendFile(__dirname, "../public/");
+  app.get("/members", (req, res) => {
+    res.sendFile(__dirname, "../public/members.html");
   });
 };
