@@ -3,7 +3,7 @@ $(document).ready(function() {
   $(".reserve").on("click", function(event) {
     var id = $(this).data("id");
     // var tableReserved = $(this).data("reserveTable"); //make reserveTable a boolean in the DB
-    $.ajax("/view-table/" + id, {
+    $.ajax("/members/" + id, {
       method: "PUT",
       data: {
         reserveTable: true,
@@ -16,5 +16,4 @@ $(document).ready(function() {
         console.log(error);
       });
   });
-  //make a new col in DB for above function
 });
