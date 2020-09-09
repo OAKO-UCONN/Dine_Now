@@ -6,8 +6,6 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 const { dirname } = require("path");
 
 module.exports = function(app) {
-  
-
   app.get("/", (req, res) => {
     // Changed this to always redirect to homepage and user just presses login.
     //  The browser saves the login info. If this is not the case we can use local storage
@@ -18,7 +16,6 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
-  
 
   //Changing this to redireect user to homepage first then they press the login button on the navbar.
   //This is just a backup. The Changes are above in app.get "/"
@@ -42,15 +39,11 @@ module.exports = function(app) {
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+  app.get("/restaurant ", isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/restaurant.html"));
   });
 
-  app.get("/restaurant", (req, res) => {
-    res.sendFile(__dirname, "../public/restaurant.html");
-  });
-
-  app.get("/view-table", (req, res) => {
-    res.sendFile(__dirname, "../public/view-tables.html");
+  app.get("/", (req, res) => {
+    res.sendFile(__dirname, "../public/");
   });
 };
