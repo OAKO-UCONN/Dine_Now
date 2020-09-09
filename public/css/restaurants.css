@@ -1,20 +1,39 @@
+/* *This CSS Is to Change the Tile Color but it only changes text color.* */
 
-   
-   
-   
-   
-   
-   
-   
-
-/*This CSS Is to Change the Tile Color but it only changes text color.
-
-.nav-link:hover {color: #0f0;}
-.card:hover {color: #0f0;}
-.text-white:hover {color: #0f0;}
-.bg-secondary:hover {color: #0f0;}
-.mb-3:hover {color: #0f0;}
-.card-body:hover {color: #0f0;}
-.bootstrap-tiles:hover {color: #0f0;}
-.mb-3:hover {color: #0f0;}
- */
+.nav-link:hover {
+  color: #0f0;
+}
+.card:hover {
+  color: #0f0;
+}
+.text-white:hover {
+  color: #0f0;
+}
+.bg-secondary:hover {
+  color: #0f0;
+}
+.mb-3:hover {
+  color: #0f0;
+}
+.card-body:hover {
+  color: #0f0;
+}
+.bootstrap-tiles:hover {
+  color: #0f0;
+}
+.mb-3:hover {
+  color: #0f0;
+}
+.map-container-2 {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: absolute;
+  height: 0;
+}
+.map-container-2 iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

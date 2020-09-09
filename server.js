@@ -1,4 +1,5 @@
 // Requiring necessary npm packages
+// var bodyParser = require("body-parser");
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -19,6 +20,9 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+//body-parsing middleware
+// app.use(bodyParser.text());
 // express-handlebars middleware
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
