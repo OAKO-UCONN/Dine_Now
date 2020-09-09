@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/bootstrap-gridsys.css">
     <link rel="stylesheet" href="stylesheets/restaurants.css">
+    <link rel="stylesheet" href="stylesheets/open-wm.css"
     <!--bootstrap-gridsys.css This CSS will detect Bootstrap CSS classes and automatically add debug boxes.-->
   </head>
   <!--Background CSS Start-->
@@ -211,7 +212,7 @@
         </div><!--Restaurants Row End--> 
         <div class="row myrows"><!--Weather MAP MAP MAP Row START-->
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mycols">
-            <!--Insert Google Map below in this div-->
+            <!--Insert Google Map below in this div--><!--ONLY GOOGLE MAPS IN THIS ROW NO OTHER HTML ELEMENTS OTHER THAN THE TITLE!-->
             <!--------------------------------------->
             <div class='weather-wrapper'>
               <h1>Weather</h1>
@@ -220,21 +221,54 @@
             <!--------------------------------------->
           </div>
         </div><!--Weather Map Row END-->
-        <div class="row myrows"><!--Weather INFO INFO INFO Row START-->
-          <!--Insert Tempature Info below in this div-->
-          <!------------------------------------------->
-            <div id="currentRes" class="col-md-4">
-              <p id="city"></p>
-              <p id="temp"></p>
-              <p id="humidity"></p>
-              <p id="skydescription"></p>
-              <p id="wind"></p>
-            </div>
-          <!------------------------------------------->
+       
+        <!--IMPORTANT! USE OPEN WEATHER MAP TO DISPLAY INFORMATION BELOW THE MAP NOT IN THE MAP! MAP WILL HAVE ITS OWN ROW!-->
+
+        <div class="row myrows"><!--DISPLAY OPEN WEATHER MAP INFO ONLY IN THIS BOOTSTRAP ROW!-->
+
         </div>
 
       </div><!--Container-->
       
+      <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY--container-start-->
+      <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+      </header>
+      <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+      <!--Bootstrap Container-->
+      <div class="container-fluid">
+        <div class="row">
+          <aside class="col-lg-3 bg-light">
+            <h5 class="mt-1">Search for a City:</h5>
+            <span id="error"></span>
+            <div class="form-inline form-group">
+              <input class="form-control" type="text" id="search-value" placeholder="City Name"/>
+              <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
+            </div>
+    
+      <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+      <!-- TODO:Weather data goes here  -->
+      
+      <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+      <div id="show"></div>
+    
+      <!--
+        <div class="row">
+          <h2>City</h2>
+        </div>
+        <div class="row">     
+          <h3>Weather</h3>
+        </div>
+        <div class="row">
+          <h3>Tempature</h3>
+        </div>
+        <div class="row">
+          <h2>Weather Gif Icon</h2>
+        </div>
+      </div>
+      --><!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+    
+      <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY--container-end-->
 
     <!-----------------------------------------BACKGROUND WRAPPER END-------------------------->
   <!--</div>
@@ -266,6 +300,9 @@
   crossorigin="anonymous"
 ></script>
 <!--BootStrap JavaScript End-->
+
+<!--Open-WM-->
+<script src="./js/open-wm-script.js"></script>
 
 <!--Weather JS-->
 <script src="./js/location.js"></script>
