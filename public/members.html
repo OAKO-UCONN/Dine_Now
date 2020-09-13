@@ -1,110 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/bootstrap-gridsys.css">
+    <link rel="stylesheet" href="stylesheets/restaurants.css">
+  <!--bootstrap-gridsys.css This CSS will detect Bootstrap CSS classes and automatically add debug boxes.-->
 
-      ul {
-        list-style-type: none;
-        margin: 20;
-        padding: 20;
-      }
-      ul {
-  list-style-type: none;
-  margin: 20;
-  padding: 20;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  bottom: 20;
-  width: 100%;
+<!--Background CSS Start-->
+
+<style>
+body {
+background-image: url("./assets/restaurantfoodtray.gif");
+/*
+background-repeat: no-repeat;
+background-size:cover;
+*/
 }
 
-li {
-  float: left;
+
+.btn-info > a{
+color:#fff !important;
+}
+nav{
+margin-bottom:30px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 24px 26px;
-  text-decoration: none;
+#map {
+height: 200px;
+width: 75%;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+.weather-wrapper{
+display: flex;
+align-items: center;
+flex-direction: column;
 }
+  </style>
+</head>
+<body>
+  <!--NavBar Start-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="./restaurants.html">DineNow</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-.active {
-  background-color: #4CAF50;
-}
-      
-      li {
-        display: inline;
-      }
-      li {
-  float: left;
-}
-
-a {
-  display: block;
-  padding: 20px;
-  background-color: dodgerblue;
-}
-      </style>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-    <script src="member.js"></script>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Almarai&family=Architects+Daughter&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/app.css" />
-    <!-- Compiled and minified CSS -->
-    <!-- Compiled and minified JavaScript -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>members.html</title>
-
-    <!-- exsisting libs -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
-    />
-    <link href="stylesheets/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <nav>
-      
-    </nav>
-   
-         <!-- Sona Changes  -->
-         <div class="main-container">
-          <div class='nav'>
-            <a href="https://github.com/OAKO-UCONN/2nd_Project_Full_Stack" class='link'>GitHub</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./restaurants.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Existing Customer
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./login.html">Login</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="./signup.html">Sign Up</a>
           </div>
+<<<<<<< HEAD
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--NavBar End-->
+
+  <!-- Start of container -->
+  <div class="container-fluid mycontainer">
+    <div class="row myrows">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mycols bootstrap-tiles">
+            <!--1 Resserce reservation card-->
+            <div class="card text-white bg-secondary mb-3" style="min-height: 100px;">
+              <div class="card-header">
+                <h4>Boston Market</h4>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Fresh American Rotisserie Roasted Meals
+                </h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <button type="button" class="btn btn-info .reserve">
+                  Reservations & More Info
+                </button>
+              </div>
+=======
             <h1 class="main-value">shopMarina.</h1>
             <h2 class="sub-value">May we introduce you to the new way of <span class="sota">dining.</span> 
            
@@ -116,59 +105,127 @@ a {
                 <div class="card-image waves-effect waves-block waves-light parallax">
                   <img class="activator" src="https://jamiegeller.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY1NTI1MDkzNzc3Njc5Mzg3/breakfast_tray_136.jpg"/>
                 </div>
+>>>>>>> 754ee27755f74eef96c707131632d51f9c2e6b7f
             </div>
-                <div id="modal1" class="modal bottom-sheet">
-                    <div class="modal-content">
-                      <h4>Breakfast
-                        <p class='secondary-description'>
-                          Breakfast choices.
-                        </br>
-                        </p>
-                         <p class='project-description'>Made by world renowned chef Georgio Tsukalos, a master in extraordinary cousine.</p> 
-                          <p class='project-description'>A European style inspired breakfast made from the finest substances on Earth. 
-                          </p>
-                      </h4>
-                      <div class='modal-content-images'>
-                      <img class="modal-image materialboxed " src="https://npr.brightspotcdn.com/dims4/default/3c9664e/2147483647/strip/true/crop/640x640+0+0/resize/880x880!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkcur%2Ffiles%2F201802%2F29306594720_9ba50bebf5_z.jpg">
-                      <img class="modal-image materialboxed " src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQh0detnUPLHzqBBZx9ePl3l_O8G7vr4ocxAw&usqp=CAU">
-                      <img class="modal-image materialboxed " src="https://d50b62f6164e0c4a0279-11570554cb5edae3285603e6ab25c978.ssl.cf5.rackcdn.com/shopify_articles/images/000/002/299/original/QuickHealthyBreakfastIdeas1df05a0061d012cf46d72fca13e8c209.jpg?1546392867">
-                    </div>
-                  </div>
-                </div>
-            <div class="parallax-container modal-trigger parallax-2" href="#modal2">
-                <div class="card-image waves-effect waves-block waves-light parallax">
-                  <img class="activator" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F04%2F12164312%2Fgalentines-day-dinner-6.jpg&q=85"height='1200' />
-                </div>
-            </div>
-                <div id="modal2" class="modal bottom-sheet">
-                    <div class="modal-content">
-                      <h4>Dinner
-                        <p class='secondary-description'>
-                          Dinner Choices.</p>
-                          <p class='project-description'>A dinner worthy of Gordan Ramsay's top five in the east coast.</p>
-                            <p class='project-description'>Crafted and cooked to perfection. We take pride in delivering the freshest food in the ocean locale.</p>
-    
-                      </h4>
-                      <div class='modal-content-images'>
-                      <img class="modal-image materialboxed " src="https://i.insider.com/5beddcc248eb1217146887f3?width=1100&format=jpeg&auto=webp">
-                      <img class="modal-image materialboxed " src="https://www.omahasteaks.com/blog/wp-content/uploads/2020/01/steakhouse-experience-at-home-1080x675.jpg">
-                      <img class="modal-image materialboxed " src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT_27m2xFt6js7hqyGBGiiKgOTFTg9iJO6ReQ&usqp=CAU">
-                    </div>
-                  </div>
-                </div>
-    
-            </div>
+
+            
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 mycols bootstrap-tiles"></div>
+          
         
-      <!-- Sona Changes  -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script type="text/javascript" src="js/members.js"></script>
-    <script>
-      $(document).ready(function() {
-        $(".collapsible").collapsible();
-        $(".modal").modal();
-        $(".materialboxed").materialbox();
-        $(".parallax").parallax();
-      });
-    </script>
-  </body>
+     </div>
+      <!-- <div class="row myrows"> -->
+        <!--Weather MAP MAP MAP Row START-->
+       
+      <!-- </div> -->
+      <!--Weather Map Row END-->
+
+      <!--IMPORTANT! USE OPEN WEATHER MAP TO DISPLAY INFORMATION BELOW THE MAP NOT IN THE MAP! MAP WILL HAVE ITS OWN ROW!-->
+
+      
+        <!--DISPLAY OPEN WEATHER MAP INFO ONLY IN THIS BOOTSTRAP ROW!-->
+
+    </div>
+    <!--Container-->
+
+    <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY--container-start-->
+    <header class="container-fluid text-center text-white bg-dark p-2">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+    <!--Bootstrap Container-->
+    <div class="container-fluid">
+
+      <div class="row">      
+            <div class="col-lg-3 bg-light">
+                  <h5 class="mt-1">Search for a City:</h5>
+                  <span id="error"></span>
+                  <div class="form-inline form-group">
+                    <input class="form-control" type="text" id="search-value" placeholder="City Name" />
+                    <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
+                  </div>
+
+                  <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+                  <!-- TODO:Weather data goes here  -->
+
+                
+                  <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+                <div id="show"></div>
+                <div class="row">
+                  <h2>City</h2>
+                </div>
+                <div class="row">     
+                  <h3>Weather</h3>
+                </div>
+                <div class="row">
+                  <h3>Tempature</h3>
+                </div>
+                <div class="row">
+                  <h2>Weather Gif Icon</h2>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6 col-6 mycols bootstrap-tiles weather-wrapper">
+              <!--Insert Google Map below in this div-->
+              <!--ONLY GOOGLE MAPS IN THIS ROW NO OTHER HTML ELEMENTS OTHER THAN THE TITLE!-->
+              <!--------------------------------------->
+              <!-- <div class='weather-wrapper'> -->
+            
+              <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6 col-6 mycols bootstrap-tiles weather-wrapper">
+                <!--Insert Google Map below in this div-->
+                <!--ONLY GOOGLE MAPS IN THIS ROW NO OTHER HTML ELEMENTS OTHER THAN THE TITLE!-->
+                <!--------------------------------------->
+                <!-- <div class='weather-wrapper'> -->
+              
+              
+                <div id="map">
+                  <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 500px">
+                    <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                      style="border:0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              
+              
+                <!--------------------------------------->
+              </div>
+            
+              <!--------------------------------------->
+            
+      </div>
+      -->
+          <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY-->
+
+          <!--OpenWM-SEARCH-By-City-OMARS-CODE-CONTAINER-DO-NOT-MODIFY--container-end-->
+
+          <!-----------------------------------------BACKGROUND WRAPPER END-------------------------->
+          <!--</div> -->
+</div>
+          <!--Backround HTML End-->
+
+          <!-----------------------------------------END_HTML---------------------------------------->
+
+          <!--JQuery & Ajax-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+          <!--Google Maps-->
+          <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0RVEbGKAFWNZzvLH8Ri1stQGIo-17f0&libraries=&v=weekly"></script>
+
+          <!--BootStrap JavaScript-->
+ 
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+          <!--BootStrap JavaScript End-->
+
+          <!--Open-WM-->
+          <script src="./js/open-wm-script.js"></script>
+
+          <!--Weather JS-->
+          <script src="./js/location.js"></script>
+          <script src="./js/tables.js"></script>
+</body>
+
 </html>
