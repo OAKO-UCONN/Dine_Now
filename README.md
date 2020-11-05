@@ -6,6 +6,8 @@ This Project is called Dine-Now! Dine-Now was made to help people connect and fi
 1: Install node.js if you have not already.
 2: Open with any terminal or integrated terminal in Vscodium/Vscode.
 
+To change the port open server.js in a code editor and change the port number on line 9.
+
 4: In the project directory, run these commands to start the server locally.
 ### `npm i`
 ### `node server.js`
@@ -19,5 +21,5 @@ In the project directory, you can run:
 ### `node server.js`
 
 Runs the app in the development mode.\
-Open {http://localhost:8080} to view it in the browser.
+Open {http://localhost:8089} to view it in the browser.
 
