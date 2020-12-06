@@ -4,6 +4,7 @@ This Project is called Dine-Now! Dine-Now was made to help people connect and fi
 
 # Getting Started with DineNow
 1: Install node.js if you have not already.
+
 2: Open with any terminal or integrated terminal in Vscodium/Vscode.
 
 To change the port open server.js in a code editor and change the port number on line 9.
