@@ -10,9 +10,9 @@ To change the port open server.js in a code editor and change the port number on
 
 4: In the project directory, run these commands to start the server locally.
 ### `npm i`
-### `node server.js`
+### `npm start`
 
-Note: This is a React Application be careful running the commands in the wrong directory.
+Note: This is a React Application. Make sure to run the commands only on the project root directory.
 
 ## Available Scripts
 
